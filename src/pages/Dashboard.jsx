@@ -1,8 +1,15 @@
+import CognitiveTest from "./CognitiveTest";
+import MRIUpload from "./MRIUpload";
+
 const Dashboard = () => {
+  // Dummy cognitive test result
+  const cognitiveResult = "Possible Risk";
+
   return (
     <div className="p-6">
-      <h2 className="text-3xl font-bold mb-6">Dashboard</h2>
-      <p>Welcome! This is your main dashboard.</p>
+      <h2 className="text-3xl font-bold mb-6">Welcome, User</h2>
+      <CognitiveTest />
+      {cognitiveResult === "Possible Risk" && <MRIUpload />}
     </div>
   );
 };
